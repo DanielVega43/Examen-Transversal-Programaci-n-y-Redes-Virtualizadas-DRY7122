@@ -1,0 +1,18 @@
+def verificar_vlan(numero_vlan):
+    if 0 <= numero_vlan <= 99:
+        return "La VLAN {} es del rango SIMPLE.".format(numero_vlan)
+    elif 100 <= numero_vlan <= 199:
+        return "La VLAN {} es del rango EXTENDIDO.".format(numero_vlan)
+    else:
+        return "El número VLAN {} no pertenece a ningún rango conocido.".format(numero_vlan)
+
+def main():
+    # Ejemplos de números de VLAN para probar el script
+    vlans = [10, 150, 99, 200, 0, 100]
+
+    for vlan in vlans:
+        resultado = verificar_vlan(vlan)
+        print(resultado)
+
+if __name__ == "__main__":
+    main()
